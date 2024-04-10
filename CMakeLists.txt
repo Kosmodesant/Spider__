@@ -1,11 +1,11 @@
 ﻿cmake_minimum_required(VERSION 3.19)
 project(Diplom VERSION 1.0 LANGUAGES CXX)
 
-set(LIBPQ_ROOT $ENV{LIBPQXX_ROOT})      # Укажите путь к libpq++
-
+set(LIBPQ_ROOT "C:/Users/Robot/Desktop/dev/C++/Diplom_/libpqxx-master")      # Укажите путь к libpq++
+SET(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "C:/Users/Robot/Desktop/dev/C++/Diplom_")
 # Boost:
 # Компоновщик: доп. каталоги библиотек
-link_directories($ENV{BOOST_ROOT}/lib)
+link_directories("C:/Users/Robot/Desktop/dev/C++/Diplom_/boost_1_80_0/libs")
 find_package(Boost 1.80.0 REQUIRED)
 if(NOT Boost_FOUND)
 	message(FATAL_ERROR "Could not find Boost")
